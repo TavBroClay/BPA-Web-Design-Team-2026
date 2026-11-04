@@ -42,6 +42,17 @@ nav img {
     cursor: pointer;
     transition: 0.25s;
 }
+.btns a {
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.25s;
+}
+.btns a:hover {
+    color: white;
+}
 .greenLine {
     width: 100%;
     height: 15px;
