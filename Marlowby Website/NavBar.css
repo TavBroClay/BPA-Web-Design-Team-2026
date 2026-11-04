@@ -27,7 +27,7 @@ nav img {
     transition: 0.25s;
 }
 .navLinkes li a:hover {
-    font-size: 1.35rem;
+    font-size: 1.30rem;
 }
 .btns {
     display: flex;
@@ -51,7 +51,7 @@ nav img {
     transition: 0.25s;
 }
 .btns a:hover {
-    font-size: 1.35rem;
+    font-size: 1.30rem;
 }
 .greenLine {
     width: 100%;
