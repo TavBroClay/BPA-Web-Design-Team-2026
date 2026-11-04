@@ -27,7 +27,7 @@ nav img {
     transition: 0.25s;
 }
 .navLinkes li a:hover {
-    color: rgb(28 117 188);
+    font-size: 1.35rem;
 }
 .btns {
     display: flex;
@@ -44,14 +44,14 @@ nav img {
 }
 .btns a {
     position: relative;
-    font-size: large;
+    font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 0.25s;
 }
 .btns a:hover {
-    color: white;
+    font-size: 1.35rem;
 }
 .greenLine {
     width: 100%;
