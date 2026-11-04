@@ -27,28 +27,31 @@ nav img {
     transition: 0.25s;
 }
 .navLinkes li a:hover {
-    font-size: 1.30rem;
+    color: rgb(28 117 188);
 }
 .btns {
     display: flex;
     padding: 2.5rem;
     margin-left: 2rem;
+    font-family: "Century Gothic", sans-serif;
+    font-size: medium;
+    font-weight: bold;
     background-color: rgb(104 173 69);
+    color: white;
     border: none;
+    cursor: pointer;
     transition: 0.25s;
 }
 .btns a {
     position: relative;
-    font-family: "Century Gothic", sans-serif;
-    font-size: 1.25rem;
+    font-size: large;
     font-weight: bold;
     text-decoration: none;
-    color: white;
-    cursor: pointer;
+    color: black;
     transition: 0.25s;
 }
 .btns a:hover {
-    font-size: 1.30rem;
+    color: white;
 }
 .greenLine {
     width: 100%;
