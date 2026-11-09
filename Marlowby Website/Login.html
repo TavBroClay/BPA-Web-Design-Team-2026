@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="NavBar.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
+    <style>
+        fieldset{
+            width: 40%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
     <title>Marlowby/Login</title>
 </head>
 <body>
@@ -21,3 +28,15 @@
     <div class="greenLine">_</div>
     <div class="orangeLine">_</div>
     <div class="blueLine">_</div>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required=""><br/>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required=""><br/>
+            <label for="remember">Remember Me</label>
+            <input type="checkbox" name="remember" id="remember">
+            <input type="submit" name="login" id="login" value="Log In">
+        </fieldset>
+    </form>
