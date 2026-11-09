@@ -15,35 +15,70 @@
             width: 1000%;
             margin: 0;
             left: 0;
-            animation: 60s slider infinite;
+            animation: 180s slider infinite;
+         }
+        #slider figure div {
+            position: absolute;
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+        #slider figure div h1 {
+            margin-top: 475px;
+            margin-bottom: 0;
+            font-size: 70px;
+        }
+        #slider figure div p {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 5px;
+            font-size: 20px;
+            width: 50%;
+        }
+        #slider figure button {
+            padding: 1rem;
+            font-family: "Century Gothic", sans-serif;
+            background-color: rgb(247 148 30);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+         #slider figure button a {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: 0.25s;
+        }
+        #slider figure button a:hover {
+        font-size: 1.30rem;
         }
         #slider figure img {
           float: left;
           width: 10%;
           height: 750px;
         }
-        @-webkit-keyframes slider {
-            0% {left: 0;}
-            10% {left: 0;}
-            20% {left: -100%;}
-            30% {left: -100%;}
-            40% {left: -200%;}
-            50% {left: -200%;}
-            60% {left: -300%;}
-            70% {left: -300%;}
-            80% {left: -400%;}
-            90% {left: -400%;}
-            100% {left: -500%;}
-            110% {left: -500;}
-            120% {left: -600%;}
-            130% {left: -600%;}
-            140% {left: -700%;}
-            150% {left: -700%;}
-            160% {left: -800%;}
-            170% {left: -800%;}
-            180% {left: -900%;}
-            190% {left: -900%;}
-            200% {left: -100%;}
+        @keyframes slider {
+            0% {left: 0%;}
+            5% {left: 0%;}
+            10% {left: -100%;}
+            15% {left: -100%;}
+            20% {left: -200%;}
+            25% {left: -200%;}
+            30% {left: -300%;}
+            35% {left: -300%;}
+            40% {left: -400%;}
+            45% {left: -400%;}
+            50% {left: -500%;}
+            55% {left: -500%;}
+            60% {left: -600%;}
+            65% {left: -600%;}
+            70% {left: -700%;}
+            75% {left: -700%;}
+            80% {left: -800%;}
+            85% {left: -800%;}
+            90% {left: -900%;}
+            95% {left: -900%;}
+            100% {left: 0%;}
         }
     </style>
 </head>
@@ -58,27 +93,79 @@
         </ul>
         <button class="btns"><a href="Login.html">Login</a></button>
     </nav>
+    <div class="greenLine">_</div>
+    <div class="orangeLine">_</div>
+    <div class="blueLine">_</div>
     <header>
-        <div class="greenLine">_</div>
-        <div class="orangeLine">_</div>
-        <div class="blueLine">_</div>
         <p style="text-align: center; font-size: 50px; font-weight: bold; margin-top: 40px; margin-bottom: 25px;">Explore Your City, One Box at a Time.</p>
         <p style="text-align: center; font-size: 20px;">Discover the best experiences you can get, from different cities across the United States, all within the comforts of your home.<br>
         We currently have 50 cities across the nation, for you to explore!</p>
     </header>
+    <div class="greenLine" style="margin-bottom: 0;">_</div>
     <div id="slider">
         <figure>
+            <div style="left: 0.25%;">
+                <h1>Tampa, FL</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem aliquam odit nostrum beatae dolores repellat nihil saepe modi tempora tenetur alias doloribus esse dolorum, deserunt, ratione cupiditate provident magnam.</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Edgar Cotto-Tampa-unsplash.jpg" alt="Tampa">
+            <div style="left: 10.25%;">
+                <h1>Los Angeles, CA</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, deserunt nisi? Et, sunt quas? Quidem et ratione facere expedita inventore quod eius necessitatibus deleniti. Rerum optio tenetur ducimus magni et.</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Jake Blucker-Los Angeles-unsplash.jpg" alt="Los Angeles">
+            <div style="left: 20.25%;">
+                <h1>Columbus, OH</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repudiandae nobis doloribus alias minima sed impedit libero a aliquam fugiat. Reprehenderit neque quidem nobis culpa ab optio quis vel libero.</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Jordan Griffith-Columbus-unsplash.jpg" alt="Columbus">
+            <div style="left: 30.25%;">
+                <h1>Jacksonville, FL</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusantium laudantium id, cumque, illum a voluptas optio nemo sapiente repellendus, eaque voluptate fugiat quas exercitationem et ea tempora minima? Voluptatibus?</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Lance Asper-Jacksonville-unsplash.jpg" alt="Jacksonville">
+            <div style="left: 40.25%;">
+                <h1>New York City, NY</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quam nostrum, explicabo, eos itaque minima ipsum fuga veniam doloremque facere tenetur laboriosam aliquam aut harum. Aspernatur alias ipsa impedit sunt.</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Luca Bravo-New York City-unsplash.jpg" alt="New York City">
+            <div style="left: 50.25%;">
+                <h1>Tulsa, OK</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aut velit eum sunt ipsam ducimus sed quas. Sint est debitis doloribus dolore error tenetur inventore accusamus cumque, culpa dolorum ipsam!</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Mick Haupt-Tulsa-unsplash.jpg" alt="Tulsa">
+            <div style="left: 60.25%;">
+                <h1>Philadelphia, PA</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut magnam, id incidunt ipsa impedit, a nostrum nam alias iusto numquam sunt mollitia minima ipsum quod deleniti ratione, ex eius culpa?</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Pretty Pink-Philadelphia-unsplash.jpg" alt="Philadelphia">
-            <img src="Images/Cities/Richard McDavid-Chicago-unsplash.jpg" alt="Chicago">
+            <div style="left: 70.25%;">
+                <h1>Chicago, IL</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quia aspernatur obcaecati. Distinctio numquam ut, ab necessitatibus adipisci quidem at reprehenderit quasi. Unde magni consequatur, exercitationem veniam labore aperiam expedita!</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
+                <img src="Images/Cities/Richard McDavid-Chicago-unsplash.jpg" alt="Chicago">
+            <div style="left: 80.25%;">
+                <h1>Arlington, TX</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dicta odit, exercitationem voluptas vero similique. Dolores, doloribus quis. Numquam odio iste assumenda saepe architecto voluptatum delectus quas sunt veritatis distinctio!</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Trac Vu-Arlington-unsplash.jpg" alt="Arlington">
+            <div style="left: 90.25%;">
+                <h1>Houston, TX</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore minima ullam pariatur perferendis cum, mollitia nemo alias iure molestias aspernatur non libero dolorem ducimus eligendi maiores suscipit consectetur placeat! Necessitatibus!</p>
+                <button><a href="Cities.html">Learn More</a></button>
+            </div>
             <img src="Images/Cities/Trac Vu-Houston-unsplash.jpg" alt="Houston">
         </figure>
     </div>
+    <div class="orangeLine">_</div>
 </body>
 </html>
