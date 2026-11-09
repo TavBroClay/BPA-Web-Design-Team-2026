@@ -7,9 +7,29 @@
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <style>
         fieldset{
-            width: 40%;
-            margin: 0 auto;
+            font-family: "Century Gothic", sans-serif;
+            position: relative;
+            vertical-align:center;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 17rem;
+            margin-top: 10rem;
+            margin-left: 37.5%;
             text-align: center;
+            background-color: rgb(245 222 179);
+            border-color: rgb(247 148 30);
+            border-width: .35em;
+            border-style: solid;
+        }
+        .loginPage{
+            min-height: 1080px;
+            background-image: url('Images/Cities/Matthew Hamilton-Phoenix-unsplash.jpg');
+            /*background-size: cover;*/
+            display: relative;
+            margin: 0 auto;
+            vertical-align: center;
+            background-repeat: no-repeat;
         }
     </style>
     <title>Marlowby/Login</title>
@@ -25,18 +45,25 @@
         </ul>
         <button class="btns"><a href="Login.html">Login</a></button>
     </nav>
-    <div class="greenLine">_</div>
-    <div class="orangeLine">_</div>
-    <div class="blueLine">_</div>
-    <form action="" method="post">
-        <fieldset>
-            <legend>Login</legend>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" required=""><br/>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required=""><br/>
-            <label for="remember">Remember Me</label>
-            <input type="checkbox" name="remember" id="remember">
-            <input type="submit" name="login" id="login" value="Log In">
-        </fieldset>
-    </form>
+
+    
+    <div class="loginPage">
+        <div class="greenLine">_</div>
+        <div class="orangeLine">_</div>
+        <div class="blueLine">_</div>
+        <form action="" method="post">
+            <fieldset id="loginForm">
+                <legend><h1>Log In</h1></legend>
+                <div id='loginInfo'>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required="" tabindex="1">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required="" tabindex="2">
+                </div>
+                <label for="remember">Remember Me</label>
+                <input type="checkbox" name="remember" id="remember" tabindex="3">
+                <input type="submit" name="login" id="login" value="Log In" style="background-color:rgb(104 173 69); color: white;" tabindex="4">
+            </fieldset>
+        </form>
+    </div>
+</body>
