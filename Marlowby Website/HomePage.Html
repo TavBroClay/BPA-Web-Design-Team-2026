@@ -7,33 +7,33 @@
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <title>Marlowby/Home</title>
 <style>
-        #slider {
+        #citySlider {
             overflow: hidden;
         }
-        #slider figure {
+        #citySlider figure {
             position: relative;
             width: 1000%;
             margin: 0;
             left: 0;
             animation: 180s slider infinite;
          }
-        #slider figure div {
+        .cityInfo {
             position: absolute;
             color: white;
             text-shadow: 5px 5px 5px black;
         }
-        #slider figure div h1 {
-            margin-top: 475px;
+        .cityInfo h1 {
+            margin-top: 470px;
             margin-bottom: 0;
             font-size: 70px;
         }
-        #slider figure div p {
+        .cityInfo p {
             font-family: Arial, Helvetica, sans-serif;
             margin-top: 5px;
             font-size: 20px;
             width: 50%;
         }
-        #slider figure button {
+        .cityInfo button {
             padding: 1rem;
             font-family: "Century Gothic", sans-serif;
             background-color: rgb(247 148 30);
@@ -42,20 +42,46 @@
             border-radius: 20px;
             cursor: pointer;
         }
-         #slider figure button a {
+        .cityInfo a {
             font-size: 1.25rem;
             font-weight: bold;
             text-decoration: none;
             color: white;
             transition: 0.25s;
         }
-        #slider figure button a:hover {
+        .cityInfo a:hover {
         font-size: 1.30rem;
         }
-        #slider figure img {
+        #citySlider figure img {
           float: left;
           width: 10%;
           height: 750px;
+          object-fit: cover;
+        }
+        .citySliderNav {
+            bottom: -180px;
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        input[name="r"]{
+            position: absolute;
+            visibility: hidden;
+        }
+        .bar {
+            width: 50px;
+            height: 10px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .bar:hover {
+            width: 55px;
+            height: 15px;
+            background-color: rgb(247 148 30);
         }
         @keyframes slider {
             0% {left: 0%;}
@@ -102,7 +128,7 @@
         We currently have 50 cities across the nation, for you to explore!</p>
     </header>
     <div class="greenLine" style="margin-bottom: 0;">_</div>
-    <div id="slider">
+    <div id="citySlider">
         <figure>
             <div style="left: 0.25%;">
                 <h1>Tampa, FL</h1>
@@ -165,6 +191,30 @@
             </div>
             <img src="Images/Cities/Trac Vu-Houston-unsplash.jpg" alt="Houston">
         </figure>
+        <div class="citySliderBtns">
+            <input type="radio" name="r" id="r1">
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <input type="radio" name="r" id="r6">
+            <input type="radio" name="r" id="r7">
+            <input type="radio" name="r" id="r8">
+            <input type="radio" name="r" id="r9">
+            <input type="radio" name="r" id="r10">
+        </div>
+        <div class="citySliderNav">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+            <label for="r6" class="bar"></label>
+            <label for="r7" class="bar"></label>
+            <label for="r8" class="bar"></label>
+            <label for="r9" class="bar"></label>
+            <label for="r10" class="bar"></label>
+        </div>
     </div>
     <div class="orangeLine">_</div>
 </body>
