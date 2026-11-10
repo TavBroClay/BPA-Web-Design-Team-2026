@@ -1,0 +1,40 @@
+fieldset{
+    font-family: "Century Gothic", sans-serif;
+    position: relative;
+    vertical-align:center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 17rem;
+    margin-top: 10rem;
+    margin-left: 37.5%;
+    text-align: center;
+    background-color: rgba(245 222 179 / .95);
+    border-color: rgb(247 148 30);
+    border-width: .35em;
+    border-style: solid;
+}
+input[type=submit]{
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid rgb(104 173 69);
+    font-size:16px;
+    justify-self: center;
+}
+input[type=text], input[type=password]{
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid rgba(28 117 188 / .95);
+    font-size: 16px;
+    justify-self: center;
+    margin: 10px auto;
+}
+.loginPage{
+    min-height: 1080px;
+    background-image: url('Images/Cities/Matthew Hamilton-Phoenix-unsplash.jpg');
+    /*background-size: cover;*/
+    display: relative;
+    margin: 0 auto;
+    vertical-align: center;
+    background-repeat: no-repeat;
+}
