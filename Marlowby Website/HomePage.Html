@@ -4,109 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="NavBar.css">
+    <link rel="stylesheet" type="text/css" href="Home-citySlider.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <title>Marlowby/Home</title>
-<style>
-        #citySlider {
-            overflow: hidden;
-        }
-        #citySlider figure {
-            position: relative;
-            width: 1000%;
-            margin: 0;
-            left: 0;
-            animation: 180s slider infinite;
-         }
-        .cityInfo {
-            position: absolute;
-            color: white;
-            text-shadow: 5px 5px 5px black;
-        }
-        .cityInfo h1 {
-            margin-top: 470px;
-            margin-bottom: 0;
-            font-size: 70px;
-        }
-        .cityInfo p {
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 5px;
-            font-size: 20px;
-            width: 50%;
-        }
-        .cityInfo button {
-            padding: 1rem;
-            font-family: "Century Gothic", sans-serif;
-            background-color: rgb(247 148 30);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        .cityInfo a {
-            font-size: 1.25rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            transition: 0.25s;
-        }
-        .cityInfo a:hover {
-        font-size: 1.30rem;
-        }
-        #citySlider figure img {
-          float: left;
-          width: 10%;
-          height: 750px;
-          object-fit: cover;
-        }
-        .citySliderNav {
-            bottom: -60px;
-            display: flex;
-            column-gap: 1rem;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-        input[name="r"]{
-            position: absolute;
-            visibility: hidden;
-        }
-        .bar {
-            width: 50px;
-            height: 10px;
-            border: 2px solid white;
-            cursor: pointer;
-            transition: 1s;
-        }
-        .bar:hover {
-            width: 55px;
-            height: 15px;
-            background-color: rgb(247 148 30);
-        }
-        @keyframes slider {
-            0% {left: 0%;}
-            5% {left: 0%;}
-            10% {left: -100%;}
-            15% {left: -100%;}
-            20% {left: -200%;}
-            25% {left: -200%;}
-            30% {left: -300%;}
-            35% {left: -300%;}
-            40% {left: -400%;}
-            45% {left: -400%;}
-            50% {left: -500%;}
-            55% {left: -500%;}
-            60% {left: -600%;}
-            65% {left: -600%;}
-            70% {left: -700%;}
-            75% {left: -700%;}
-            80% {left: -800%;}
-            85% {left: -800%;}
-            90% {left: -900%;}
-            95% {left: -900%;}
-            100% {left: 0%;}
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -217,5 +117,6 @@
         </div>
     </div>
     <div class="orangeLine">_</div>
+    <script src="Home-citySlider.js"></script>
 </body>
 </html>
