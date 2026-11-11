@@ -73,3 +73,23 @@ nav img {
     background-color: rgb(28 117 188);
     color: transparent;
 }
+
+/* MOBILE friendly */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navLinkes {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btns {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+}
