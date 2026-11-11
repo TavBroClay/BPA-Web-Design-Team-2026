@@ -16,7 +16,7 @@
 .cityInfo {
     position: absolute;
     color: white;
-    text-shadow: 5px 5px 5px black;
+    text-shadow: 2.5px 2.5px 2.5px black;
     z-index: 1;
 }
 .cityInfo h1 {
@@ -85,48 +85,48 @@ input[name="r"]{
 }
 
 /* MOBILE friendly */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
 
-nav {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-}
-nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-}
-header p:first-child {
-    font-size: 30px !important;
-}
-header p:nth-child(2) {
-    font-size: 16px !important;
-    padding: 0 15px;
-}
-#citySlider figure, #citySlider figure img {
-    height: 375px;
-}
-.cityInfo h1 {
-    margin-top: 180px;
-    font-size: 35px;
-}
-.cityInfo p {
-    font-size: 14px;
-    width: 30%;
-}
-.cityInfo button {
-    padding: 0.75rem;
-}
-.cityInfo a {
-    font-size: .75rem;
-}
-.bar {
-    width: 25px;
-    height: 5px;
-}
-.citySliderNav {
-    bottom: 10px;
-    column-gap: 0.5rem;
-}
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    header p:first-child {
+        font-size: 30px !important;
+    }
+    header p:nth-child(2) {
+        font-size: 16px !important;
+        padding: 0 15px;
+    }
+    #citySlider figure, #citySlider figure img {
+        height: 350px;
+    }
+    .cityInfo h1 {
+        margin-top: 155px;
+        font-size: 35px;
+    }
+    .cityInfo p {
+        font-size: 14px;
+        width: 30%;
+    }
+    .cityInfo button {
+        padding: 0.75rem;
+    }
+    .cityInfo a {
+        font-size: .75rem;
+    }
+    .bar {
+        width: 25px;
+        height: 5px;
+    }
+    .citySliderNav {
+        bottom: 10px;
+        column-gap: 0.5rem;
+    }
 }
