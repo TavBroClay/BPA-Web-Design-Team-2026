@@ -105,10 +105,10 @@ input[name="r"]{
         padding: 0 15px;
     }
     #citySlider figure, #citySlider figure img {
-        height: 350px;
+        height: 325px;
     }
     .cityInfo h1 {
-        margin-top: 155px;
+        margin-top: 130px;
         font-size: 35px;
     }
     .cityInfo p {
@@ -121,9 +121,16 @@ input[name="r"]{
     .cityInfo a {
         font-size: .75rem;
     }
+    .cityInfo a:hover {
+    font-size: .90rem;
+}
     .bar {
         width: 25px;
         height: 5px;
+    }
+    .bar:hover {
+        width: 30px;
+        height: 10px;
     }
     .citySliderNav {
         bottom: 10px;
