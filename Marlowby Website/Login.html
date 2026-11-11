@@ -29,10 +29,12 @@
     
         
         <fieldset id="loginForm">
-            <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend>  
-            <!-- Registration Form 
-            <button id="registerButton">Register</button>
-            <button id="logInButton">Log In</button>
+            <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend> 
+            <button id="registerButton" onclick="alert('This button works')">Register</button>
+            <button id="logInButton" onclick="alert('This button works')">Log In</button> 
+            <!-- Registration Form -->
+
+            <!--
             <div id="register">
                 <form action="" method="post">
                         <div id='registerInfo'>
@@ -42,20 +44,22 @@
                         </div>
                         <label for="remember">Remember Me</label>
                         <input type="checkbox" name="remember" id="remember" tabindex="4">
-                        <input type="submit" name="register" id="register" value="Register" style="background-color:rgb(104 173 69); color: white;" tabindex="5">
+                        <input type="submit" name="register" id="registerSend" value="Register" tabindex="5">
                 </form>
             </div>
             -->
+
             <!-- Log In Form -->
             <div id="logIn">
-                <form action="" method="post">
+                <form action="" method="post" onsubmit="logInVerify();">
                     <div id='loginInfo'>
                         <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
                         <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
+                        <input type="checkbox" onclick="showPass()">
                     </div>
                     <label for="remember">Remember Me</label>
                     <input type="checkbox" name="remember" id="remember" tabindex="3">
-                    <input type="submit" name="login" id="login" value="Log In" style="background-color:rgb(104 173 69); color: white;" tabindex="4">
+                    <input type="submit" name="login" id="login" value="Log In" tabindex="4">
                 </form>
             <div>
         </fieldset>
@@ -63,27 +67,23 @@
     </div>
 
     <script>
-        function rememberMe() {
-            const username = document.getElementById("username");
-            const password = document.getElementById("password");
-            if (document.getElementById(remember) = "1"){
-                localStorage.setItem("username", username)
-                localStorage.setItem("password", password)
-            }
-            else {
-                localStorage.removeItem("username")
-                localStorage.removeItem("password")
-            }
-        const savedUser = localStorage.getItem("username")
-        const savedPass = localStorage.getItem("password")
-
-        function fillUser(){
-            if(savedUser && savedPass){
-                document.getElementById("username").value = savedUser
-                document.getElementById("password").value = savedPass
-            }
+        var usernameLogIn = "johnMarlowby";
+        var passwordLogIn = "testPassword!1";
+        function logInVerify(usernameLogIn, passwordLogIn){
+            if (document.getElementById(username).value !== usernameLogIn || document.getElementById(password).value !== passwordLogIn){
+                event.preventDefault();
+                alert("Invalid username or password")
             }
         }
-        window.onload(fillUser); 
+        
+        function showPass(){
+            var pass = document.getElementById("password");
+            if (pass.type === "password"){
+                document.getElementById("password").type = "text";
+            }
+            else{
+                document.getElementById("password").type = "password";
+            }
+        }
     </script>
 </body>

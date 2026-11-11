@@ -1,13 +1,16 @@
 fieldset{
     font-family: "Century Gothic", sans-serif;
-    position: relative;
+    position: flex;
     vertical-align:center;
     justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 17rem;
+    flex-direction: row;
+    align-self: center;
+    width: 20%;
+    max-width: 300px;
+    height: 19rem;
     margin-top: 10rem;
-    margin-left: 37.5%;
+    margin-left: 40%;
+    margin-right: 40%;
     text-align: center;
     background-color: rgba(245 222 179 / .95);
     border-color: rgb(247 148 30);
@@ -17,14 +20,16 @@ fieldset{
 input[type=submit]{
     border-radius: 15px;
     padding: 5px;
-    border: 2px solid rgb(104 173 69);
+    border: 2px solid rgb(28 117 188);
     font-size:16px;
     justify-self: center;
+    background-color:rgb(28 117 188); 
+    color: white;
 }
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
     border-radius: 15px;
     padding: 5px;
-    border: 2px solid rgba(28 117 188 / .95);
+    border: 2px solid rgb(28 117 188);
     font-size: 16px;
     justify-self: center;
     margin: 10px auto;
@@ -37,4 +42,18 @@ input[type=text], input[type=password]{
     margin: 0 auto;
     vertical-align: center;
     background-repeat: no-repeat;
+}
+button#registerButton, button#logInButton{
+    display: relative;
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid rgb(104 173 69);
+    font-size:16px;
+    justify-self: center;
+    background-color:rgb(104 173 69); 
+    color: white;
+    margin: 0, 15px;
+}
+#register{
+    left: -50%
 }
