@@ -71,3 +71,9 @@ button#registerButton, button#logInButton{
         padding: 0;
     }
 }
+
+#showPassword{
+    position: absolute;
+    left: 52.75%;
+    transform: translateY(125%);
+}
