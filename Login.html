@@ -52,7 +52,7 @@
 
             <!-- Log In Form -->
             <div id="logIn">
-                <form id="logInForm" method="post" onsubmit="logInVerify();">
+                <form id="logInForm" method="post">
                     <div id='loginInfo'>
                         <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
                         <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
@@ -70,21 +70,26 @@
     <script>
         var usernameLogIn = "johnMarlowby";
         var passwordLogIn = "testPassword!1";
+        const logInForm = document.getElementById("logInForm");
+        const usernameInput = document.getElementById("username");
+        const passwordInput = document.getElementById("password");
 
-        
-        document.getElementById("logInForm").addEventListener("submit", function logInVerify(){
-            if (document.getElementById("username").value !== usernameLogIn || document.getElementById("password").value !== passwordLogIn){
+        logInForm.addEventListener("submit", function logInVerify(){
+            event.preventDefault();
+            if (usernameInput.value !== usernameLogIn || passwordInput.value !== passwordLogIn){
                 alert("Invalid username or password");
+            }
+            else{
+                alert("Login successful");
             }
         });
         
         function showPass(){
-            var pass = document.getElementById("password");
-            if (pass.type === "password"){
-                document.getElementById("password").type = "text";
+            if (passwordInput.type === "password"){
+                passwordInput.type = "text";
             }
             else{
-                document.getElementById("password").type = "password";
+                passwordInput.type = "password";
             }
         }
     </script>
