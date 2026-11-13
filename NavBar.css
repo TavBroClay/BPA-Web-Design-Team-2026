@@ -36,6 +36,14 @@ nav img {
     color: white;
     cursor: pointer;
 }
+#loginNav {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: 0.30s;
+}
 .greenLine {
     width: 100%;
     height: 10px;
