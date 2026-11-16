@@ -27,6 +27,30 @@
     <div class="blueLine">_</div>
     
 
-
+    <script>
+        function logOut(){
+            localStorage.removeItem("loggedIn");
+        }
+        
+        if (localStorage.getItem("loggedIn") === "true"){
+            document.getElementById("loginNav").innerHTML = "Welcome, " + usernameLogIn + "!";
+            document.getElementById("loginNav").addEventListener("mouseenter", function(){
+                this.innerHTML = "Log Out";
+            });
+            document.getElementById("loginNav").addEventListener("mouseleave", function(){
+                this.innerHTML = "Welcome, " + usernameLogIn + "!";
+            });
+            document.getElementById("loginNav").addEventListener("click", logOut);
+        }
+        
+        function showPass(){
+            if (passwordInput.type === "password"){
+                passwordInput.type = "text";
+            }
+            else{
+                passwordInput.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
