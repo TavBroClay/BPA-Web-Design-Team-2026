@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="NavBar.css">
+    <link rel="stylesheet" type="text/css" href="Sliders-Styles.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <title>Marlowby/Cities</title>
 </head>
@@ -22,5 +23,154 @@
     <div class="greenLine">_</div>
     <div class="orangeLine">_</div>
     <div class="blueLine">_</div>
+
+     <!--States' Slider-->
+    <div class="sumInfo">
+        <p>Select a state flag and see which cities we have to offer, within it.</p>
+    </div>
+    <hr>
+    <div id="stateSlider">
+        <button class="sliderArrow leftArrow" onclick="slideStates(-1)">
+            &#10094;
+        </button>
+        <ul class="stateBox" id="stateList">
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/az.jpg" alt="Arizona">
+                    <h1>Arizona</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ca.jpg" alt="California">
+                    <h1>California</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/co.jpg" alt="Colorado">
+                    <h1>Colorado</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/fl.jpg" alt="Florida">
+                    <h1>Florida</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ga.jpg" alt="Georgia">
+                    <h1>Georgia</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/il.jpg" alt="Illinois">
+                    <h1>Illinois</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/in.jpg" alt="Indiana">
+                    <h1>Indiana</h1>
+                </a>
+            </li>
+                  <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/md.jpg" alt="Maryland">
+                    <h1>Maryland</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ma.jpg" alt="Massachusetts">
+                    <h1>Massachusetts</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/mi.jpg" alt="Michigan">
+                    <h1>Michigan</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/mn.jpg" alt="Minnesota">
+                    <h1>Minnesota</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/mo.jpg" alt="Montana">
+                    <h1>Montana</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/nc.jpg" alt="North Carolina">
+                    <h1>North Carolina</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ne.jpg" alt="Nebraska">
+                    <h1>Nebraska</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/nm.jpg" alt="New Mexico">
+                    <h1>New Mexico</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/nv.jpg" alt="Nevada">
+                    <h1>Nevada</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ny.jpg" alt="New York">
+                    <h1>New York</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/oh.jpg" alt="Ohio">
+                    <h1>Ohio</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/ok.jpg" alt="Oklahoma">
+                    <h1>Oklahoma</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/or.jpg" alt="Oregon">
+                    <h1>Oregon</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/pa.jpg" alt="Pennsylvania">
+                    <h1>Pennsylvania</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/tn.jpg" alt="Tennessee">
+                    <h1>Tennessee</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/tx.jpg" alt="Texas">
+                    <h1>Texas</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/va.jpg" alt="Virginia">
+                    <h1>Virginia</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/wa.jpg" alt="Washington">
+                    <h1>Washington</h1>
+                </a>
+            </li>
+            <li class="stateFlag">
+                <a href="Cities.html"><img src="Images/State Flags/wi.jpg" alt="Wisconsin">
+                    <h1>Wisconsin</h1>
+                </a>
+            </li>
+        </ul>
+        <button class="sliderArrow rightArrow" onclick="slideStates(1)">
+            &#10095;
+        </button>
+    </div>
+    <hr>
+
+    <script src="stateSlider.js"></script>
 </body>
 </html>
