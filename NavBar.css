@@ -21,7 +21,7 @@ nav img {
     display: flex;
     gap: 1.5rem;
 }
-.navLinkes li a {
+.navLinkes li a, #welcomeMessage {
     position: relative;
     font-size: 1.25rem;
     font-weight: bold;
