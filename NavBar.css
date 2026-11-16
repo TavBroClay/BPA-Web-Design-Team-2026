@@ -19,18 +19,27 @@ nav img {
 .navLinkes {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
-.navLinkes li a, #welcomeMessage {
+.navLinkes li, #welcomeMessage {
+    padding-top: 1.20rem;
+    padding-bottom: 1.20rem;
     position: relative;
     font-size: 1.25rem;
     font-weight: bold;
+}
+.activePage {
+    background-color: rgb(104 173 69);
+    color: white;
+}
+.navLinkes li a{
     text-decoration: none;
     color: black;
     transition: 0.30s;
 }
 .navLinkes li a:hover {
     padding: 1.20rem 25px;
+    padding-bottom: 1.30rem;
     font-size: 1.30rem;
     background-color: rgb(104 173 69);
     color: white;
@@ -41,7 +50,6 @@ nav img {
     font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
     transition: 0.30s;
 }
 .greenLine {
