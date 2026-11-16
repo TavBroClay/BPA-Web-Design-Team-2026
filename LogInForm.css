@@ -17,6 +17,19 @@ fieldset{
     border-width: .35em;
     border-style: solid;
 }
+.passwordField{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pageToggles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
 input[type=submit]{
     border-radius: 15px;
     padding: 5px;
@@ -44,15 +57,14 @@ input[type=text], input[type=password], input[type=email]{
     background-repeat: no-repeat;
 }
 button#registerButton, button#logInButton{
-    display: relative;
     border-radius: 15px;
     padding: 5px;
+    margin: auto 10px;
     border: 2px solid rgb(104 173 69);
     font-size:16px;
     justify-self: center;
     background-color:rgb(104 173 69); 
     color: white;
-    margin: 0, 15px;
 }
 #register{
     left: -50%
@@ -72,8 +84,9 @@ button#registerButton, button#logInButton{
     }
 }
 
+
 #showPassword{
     position: absolute;
-    left: 52.75%;
+    left: 74.5%;
     transform: translateY(125%);
 }

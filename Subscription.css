@@ -2,7 +2,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        flex-wrap: wrap;
+}
+
 .subscription1, .subscription2, .subscription3 {
     width: 300px;
     height: 400px;
@@ -18,22 +20,7 @@
     margin-top: 50px;
     padding: 20px;
 }
-.subscribeButton1, .subscribeButton2, .subscribeButton3 {
-    margin-top: auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    color: white;
-}
-.subscribeButton1 {
-    background-color: rgb(104, 173, 69);
-}
-.subscribeButton2 {
-    background-color: rgb(247, 148, 30);
-}
-.subscribeButton3 {
-    background-color: rgb(28, 117, 188);
-}
+
 .subscription1 {
     border-color: rgb(104, 173, 69);
 }
@@ -42,4 +29,22 @@
 }
 .subscription3{
     border-color: rgb(28, 117, 188);
+}
+
+.subscribeButton1, .subscribeButton2, .subscribeButton3 {
+    margin-top: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.subscribeButton1 {
+    background-color: rgb(104, 173, 69);
+}
+.subscribeButton2 {
+    background-color: rgb(247, 148, 30);
+}
+.subscribeButton3 {
+    background-color: rgb(28, 117, 188);
 }

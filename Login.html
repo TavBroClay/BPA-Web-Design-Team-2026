@@ -32,8 +32,10 @@
         
         <fieldset id="loginForm">
             <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend> 
-            <button id="registerButton" onclick="alert('This button works')">Register</button>
-            <button id="logInButton" onclick="alert('This button works')">Log In</button> 
+            <div class="pageToggles">
+                <button id="registerButton" onclick="alert('This button works')">Register</button>
+                <button id="logInButton" onclick="alert('This button works')">Log In</button>
+            </div>
             <!-- Registration Form -->
 
             <!--
@@ -56,9 +58,10 @@
                 <form id="logInForm" action="https://formgrid.dev/api/f/6eh7u6au" method="post" >
                     <div id='loginInfo'>
                         <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
+                        <div class="passwordField">
                         <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
                         <input type="checkbox" id="showPassword" onclick="showPass()">
-                    </div>
+                        </div>
                     <label for="remember">Remember Me</label>
                     <input type="checkbox" name="remember" id="remember" tabindex="3">
                     <input type="submit" name="login" id="login" value="Log In" tabindex="4">
