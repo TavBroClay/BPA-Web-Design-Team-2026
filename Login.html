@@ -12,12 +12,13 @@
     <nav>
         <img src="Images/Logo/Marlowby Website-NavLogo.png" translate="Marlowby">
         <ul class="navLinkes">
+            <li id="welcomeMessage"></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="Cities.html">Cities</a></li>
             <li><a href="AboutUs.html">About</a></li>
             <li><a href="Subscription.html">Subscriptions</a></li>
             <hr>
-            <li><a style="padding-right: 25px;" href="Login.html">Login</a></li>
+            <li><a style="padding-right: 25px;" href="Login.html" id="loginNav">Login</a></li>
         </ul>
     </nav>
 
@@ -52,15 +53,17 @@
 
             <!-- Log In Form -->
             <div id="logIn">
-                <form method="post" onsubmit="logInVerify();">
+                <form id="logInForm" action="https://formgrid.dev/api/f/6eh7u6au" method="post" >
                     <div id='loginInfo'>
                         <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
                         <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
-                        <input type="checkbox" onclick="showPass()">
+                        <input type="checkbox" id="showPassword" onclick="showPass()">
                     </div>
                     <label for="remember">Remember Me</label>
                     <input type="checkbox" name="remember" id="remember" tabindex="3">
                     <input type="submit" name="login" id="login" value="Log In" tabindex="4">
+                    <br>
+                    <p id="logInMessage"></p>
                 </form>
             <div>
         </fieldset>
@@ -70,21 +73,35 @@
     <script>
         var usernameLogIn = "johnMarlowby";
         var passwordLogIn = "testPassword!1";
-        function logInVerify(){
-            if (document.getElementById("username").value !== usernameLogIn || document.getElementById("password").value !== passwordLogIn){
-                alert("Invalid username or password")
-                return false;
-            }
+        const logInForm = document.getElementById("logInForm");
+        const usernameInput = document.getElementById("username");
+        const passwordInput = document.getElementById("password");
+
+        function goHome(){
+            window.location.href = "index.html";
         }
-        
-        function showPass(){
-            var pass = document.getElementById("password");
-            if (pass.type === "password"){
-                document.getElementById("password").type = "text";
+        logInForm.addEventListener("submit", function logInVerify(){
+            event.preventDefault();
+            if (usernameInput.value !== usernameLogIn || passwordInput.value !== passwordLogIn){
+                document.getElementById("logInMessage").style.color = "red";
+                document.getElementById("logInMessage").textContent = "Invalid username or password!";
             }
             else{
-                document.getElementById("password").type = "password";
+                document.getElementById("logInMessage").style.color = "green";
+                document.getElementById("logInMessage").textContent = "Login successful! Returning to home page...";
+                localStorage.setItem("loggedIn", "true");
+                localStorage.setItem("username", usernameInput.value);
+                setTimeout(goHome, 3000);
+            }
+        });
+        function showPass(){
+            if (passwordInput.type === "password"){
+                passwordInput.type = "text";
+            }
+            else{
+                passwordInput.type = "password";
             }
         }
     </script>
+    <script src="logInScripts.js"></script>
 </body>

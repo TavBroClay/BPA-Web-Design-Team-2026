@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="NavBar.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
+    <link rel="stylesheet" type="text/css" href="Subscription.css">
     <title>Marlowby/Subscription</title>
-    <style>
-
     </style>
 </head>
 <body>
     <nav>
         <img src="Images/Logo/Marlowby Website-NavLogo.png" translate="Marlowby">
         <ul class="navLinkes">
+            <li id="welcomeMessage"></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="Cities.html">Cities</a></li>
             <li><a href="AboutUs.html">About</a></li>
             <li><a href="Subscription.html">Subscriptions</a></li>
             <hr>
-            <li><a style="padding-right: 25px;" href="Login.html">Login</a></li>
+            <li><a style="padding-right: 25px;" href="Login.html" id="loginNav">Login</a></li>
         </ul>
     </nav>
     <div class="greenLine">_</div>
     <div class="orangeLine">_</div>
     <div class="blueLine">_</div>
     
+    <div class="subscriptionPage">
+        <div class="subscription1">
+            <h1>Subscription 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>$9.99/month</h2>
+            <button class="subscribeButton1" onclick="alert('This button works')">Subscribe</button>
+        </div>
+        <div class="subscription2">
+            <h1>Subscription 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>$14.99/month</h2>
+            <button class="subscribeButton2" onclick="alert('This button works')">Subscribe</button>
+        </div>
+        <div class="subscription3">
+            <h1>Subscription 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>$19.99/month</h2>
+            <button class="subscribeButton3" onclick="alert('This button works')">Subscribe</button>
+        </div>
+    </div>
 
-
+    <script src="logInScripts.js"></script>
 </body>
 </html>
