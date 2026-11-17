@@ -99,6 +99,81 @@ input[name="r"]{
     background-color: white;
 }
 
+/* How it works */
+.steps {
+    text-align: center;
+    padding: 0 25px;
+    display: flex;
+}
+.steps img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+.step1 {
+    margin-right: 300px;
+    margin-left: 300px;
+}
+.step1 img {
+    border: 5px solid rgb(104 173 69);
+}
+.step2 img {
+    border: 5px solid rgb(247 148 30);
+}
+.step3 img {
+    border: 5px solid rgb(79 129 189);
+}
+.step3 {
+    margin-left: 300px;
+}
+
+/* Box showing */
+.boxShow {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+.boxShow h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+.boxShow img {
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+}
+.boxShow button {
+    margin-top: 25px;
+    padding: 1rem;
+    background-color: rgb(104 173 69);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.30s;
+}
+.boxShow button a {
+   text-decoration: none;
+   font-family: "Century Gothic", sans-serif;
+   font-size: 1.25rem;
+   font-weight: bold;
+   color: white;
+}
+.boxShow button:hover {
+    background-color: rgb(247 148 30);
+}
+
+/*Footer*/
+footer {
+    font-family: "Century Gothic", sans-serif;
+    margin-top: 25px;
+    background-color: rgb(28 117 188);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* MOBILE friendly */
 @media screen and (max-width: 750px) {
 
