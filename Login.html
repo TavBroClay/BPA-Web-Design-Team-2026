@@ -28,83 +28,162 @@
         <div class="orangeLine">_</div>
         <div class="blueLine">_</div>
 
-    
-        
-        <fieldset id="loginForm">
-            <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend> 
-            <div class="pageToggles">
-                <button id="registerButton" onclick="alert('This button works')">Register</button>
-                <button id="logInButton" onclick="alert('This button works')">Log In</button>
-            </div>
-            <!-- Registration Form -->
+        <button id="clearLocal" onclick="clearLocalStorage()">Clear Local Storage</button>
+        <div class="forms">
+            <fieldset id="registrationForms"  style="display: none;">
+                <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend> 
 
-            <!--
-            <div id="register">
-                <form action="" method="post">
+                <div class="pageToggles">
+                    <button id="registerButton" onclick="openRegister()">Register</button>
+                    <button id="logInButton" onclick="openLogIn()">Log In</button>
+                </div>
+
+                <!-- Registration Form -->
+                <div id="register">
+                    <form id="registerForm" action="https://formgrid.dev/api/f/4gd42asl" method="post">
                         <div id='registerInfo'>
-                            <input type="email" name="email" id="username" required="" placeholder="email" tabindex="1">
-                            <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="2">
-                            <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="3">
-                        </div>
+                            <input type="email" name="email" id="emailRegistration" required="" placeholder="Email" tabindex="1">
+                            <input type="text" name="username" id="usernameRegistration" required="" placeholder="Username" tabindex="2">
+                            <div class="passwordField">
+                                <input type="password" name="password" id="passwordRegistration" required="" placeholder="Password" tabindex="3">
+                                <i id="registerEyeIcon"><ion-icon name="eye-outline" id="showPass" onclick="registerShowPass()" class="passwordFieldIcon"></ion-icon></i>
+                            </div>
                         <label for="remember">Remember Me</label>
                         <input type="checkbox" name="remember" id="remember" tabindex="4">
                         <input type="submit" name="register" id="registerSend" value="Register" tabindex="5">
-                </form>
-            </div>
-            -->
+                        <br>
+                        <p id="registerMessage"></p>
+                    </form>
+                <div>
+            </fieldset>
 
-            <!-- Log In Form -->
-            <div id="logIn">
-                <form id="logInForm" action="https://formgrid.dev/api/f/6eh7u6au" method="post" >
-                    <div id='loginInfo'>
-                        <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
-                        <div class="passwordField">
-                        <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
-                        <input type="checkbox" id="showPassword" onclick="showPass()">
-                        </div>
-                    <label for="remember">Remember Me</label>
-                    <input type="checkbox" name="remember" id="remember" tabindex="3">
-                    <input type="submit" name="login" id="login" value="Log In" tabindex="4">
-                    <br>
-                    <p id="logInMessage"></p>
-                </form>
-            <div>
-        </fieldset>
+            <fieldset id="logInForms">
+                <legend><img src="Images/Logo/Marlowby Website-NavLogo.png" alt="Marlowby"></legend> 
+
+                <div class="pageToggles">
+                    <button id="registerButton" onclick="openRegister()">Register</button>
+                    <button id="logInButton" onclick="openLogIn()">Log In</button>
+                </div>
+
+                <!-- Log In Form -->
+                <div id="logIn">
+                    <form id="logInForm" action="https://formgrid.dev/api/f/6eh7u6au" method="post">
+                        <div id='loginInfo'>
+                            <input type="text" name="username" id="username" required="" placeholder="Username" tabindex="1">
+                            <div class="passwordField">
+                                <input type="password" name="password" id="password" required="" placeholder="Password" tabindex="2">
+                                <i id="eyeIcon"><ion-icon name="eye-outline" id="showPass" onclick="showPass()" class="passwordFieldIcon"></ion-icon></i>
+                            </div>
+                        <label for="remember">Remember Me</label>
+                        <input type="checkbox" name="remember" id="remember" tabindex="3">
+                        <input type="submit" name="login" id="login" value="Log In" tabindex="4">
+                        <br>
+                        <p id="logInMessage"></p>
+                    </form>
+                <div>
+            </fieldset>
+            </div>
         </div>
     </div>
 
     <script>
         var usernameLogIn = "johnMarlowby";
         var passwordLogIn = "testPassword!1";
+        var registerUser = localStorage.getItem("registerUsername");
+        var registerPass = localStorage.getItem("registerPassword");
+
+        function clearLocalStorage(){
+            localStorage.clear();
+            document.getElementById("clearLocal").innerHTML = "Local Storage Cleared!";
+            setTimeout(function refreshPage() {location.reload();}, 2000);
+        }
+
         const logInForm = document.getElementById("logInForm");
+        const registerForm = document.getElementById("registerForm");
         const usernameInput = document.getElementById("username");
         const passwordInput = document.getElementById("password");
+        const usernameRegistrationInput = document.getElementById("usernameRegistration");
+        const passwordRegistrationInput = document.getElementById("passwordRegistration");
+
 
         function goHome(){
             window.location.href = "index.html";
         }
         logInForm.addEventListener("submit", function logInVerify(){
             event.preventDefault();
-            if (usernameInput.value !== usernameLogIn || passwordInput.value !== passwordLogIn){
-                document.getElementById("logInMessage").style.color = "red";
-                document.getElementById("logInMessage").textContent = "Invalid username or password!";
-            }
-            else{
+            if (usernameInput.value === usernameLogIn && passwordInput.value === passwordLogIn){
                 document.getElementById("logInMessage").style.color = "green";
                 document.getElementById("logInMessage").textContent = "Login successful! Returning to home page...";
                 localStorage.setItem("loggedIn", "true");
                 localStorage.setItem("username", usernameInput.value);
                 setTimeout(goHome, 3000);
             }
+            else if (usernameInput.value === registerUser && passwordInput.value === registerPass){
+                document.getElementById("logInMessage").style.color = "green";
+                document.getElementById("logInMessage").textContent = "Login successful! Returning to home page...";
+                localStorage.setItem("loggedIn", "true");
+                localStorage.setItem("username", usernameInput.value);
+                setTimeout(goHome, 3000);
+            }
+            else{
+                document.getElementById("logInMessage").style.color = "red";
+                document.getElementById("logInMessage").textContent = "Invalid username or password!";
+            }
         });
+
+        registerForm.addEventListener("submit", function registerVerify(){
+            event.preventDefault();
+            if (usernameRegistrationInput.value === "" || passwordRegistrationInput.value === ""){
+                document.getElementById("registerMessage").style.color = "red";
+                document.getElementById("registerMessage").textContent = "Please fill in all fields!";
+            }
+            else{
+                document.getElementById("registerMessage").style.color = "green";
+                document.getElementById("registerMessage").textContent = "Registration successful! Returning to home page...";
+                localStorage.setItem("loggedIn", "true");
+                localStorage.setItem("username", usernameRegistrationInput.value);
+                localStorage.setItem("registerUsername", usernameRegistrationInput.value);
+                localStorage.setItem("registerPassword", passwordRegistrationInput.value);
+                setTimeout(goHome, 3000);
+            }
+        });
+
         function showPass(){
             if (passwordInput.type === "password"){
                 passwordInput.type = "text";
+                document.getElementById("eyeIcon").innerHTML = "<ion-icon name='eye-off-outline' id='showPass' onclick='showPass()' class='passwordFieldIcon'></ion-icon>";
             }
             else{
                 passwordInput.type = "password";
+                document.getElementById("eyeIcon").innerHTML = "<ion-icon name='eye-outline' id='showPass' onclick='showPass()' class='passwordFieldIcon'></ion-icon>";
             }
+        }
+
+        function registerShowPass(){
+            if (passwordRegistrationInput.type === "password"){
+                passwordRegistrationInput.type = "text";
+                document.getElementById("registerEyeIcon").innerHTML = "<ion-icon name='eye-off-outline' id='showPass' onclick='registerShowPass()' class='passwordFieldIcon'></ion-icon>";
+            }
+            else{
+                passwordRegistrationInput.type = "password";
+                document.getElementById("registerEyeIcon").innerHTML = "<ion-icon name='eye-outline' id='showPass' onclick='registerShowPass()' class='passwordFieldIcon'></ion-icon>";
+            }
+        }
+
+        const registerSwitch = document.getElementById("registrationForms");
+        const logInSwitch = document.getElementById("logInForms");
+
+        function openLogIn(){
+            logInSwitch.style.display = "block";
+            registerSwitch.style.display = "none";
+        }
+        function openRegister(){
+            registerSwitch.style.display = "block";
+            logInSwitch.style.display = "none";
         }
     </script>
     <script src="logInScripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
+</html>
