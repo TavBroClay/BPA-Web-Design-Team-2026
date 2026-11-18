@@ -37,6 +37,9 @@
     font-size: 16px;
     cursor: pointer;
     color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 .subscribeButton1 {
