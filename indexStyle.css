@@ -51,7 +51,7 @@
     background-color: rgb(247 148 30);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
 }
 .cityInfo a {
@@ -149,7 +149,7 @@ input[name="r"]{
     padding: 1rem;
     background-color: rgb(104 173 69);
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     transition: 0.30s;
 }
