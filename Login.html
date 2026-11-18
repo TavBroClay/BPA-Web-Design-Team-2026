@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="NavBar.css">
-    <link rel="stylesheet" type="text/css" href="LogInForm.css">
+    <link rel="stylesheet" type="text/css" href="LoginStyle.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <title>Marlowby/Login</title>
 </head>
 <body>
-    <nav>
-        <img src="Images/Logo/Marlowby Website-NavLogo.png" translate="Marlowby">
-        <ul class="navLinkes">
-            <li id="welcomeMessage"></li>
-            <hr>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Cities.html">Cities</a></li>
-            <li><a href="AboutUs.html">About</a></li>
-            <li><a href="Subscription.html">Subscriptions</a></li>
-            <li style="padding: 1.25rem 25px; color: white;" class="activePage" id="loginNav">Login</li>
-        </ul>
-    </nav>
-
-    
-    <div class="loginPage">
+    <div class="navBar">
+        <nav>
+            <img src="Images/Logo/Marlowby Website-NavLogo.png" translate="Marlowby">
+            <ul class="navLinkes">
+                <li id="welcomeMessage"></li>
+                <hr>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Cities.html">Cities</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="Subscription.html">Subscriptions</a></li>
+                <li style="padding: 1.25rem 25px; color: white;" class="activePage" id="loginNav">Login</li>
+            </ul>
+        </nav>
         <div class="greenLine">_</div>
         <div class="orangeLine">_</div>
         <div class="blueLine">_</div>
+    </div>
+
+    <p style="margin-top: 6.5dvh; visibility: hidden;">_</p>
+
+    <div class="loginPage">
+    
 
         <button id="clearLocal" onclick="clearLocalStorage()">Clear Local Storage</button>
         <div class="forms">
@@ -50,11 +54,11 @@
                             </div>
                         <label for="remember">Remember Me</label>
                         <input type="checkbox" name="remember" id="rememberRegister" tabindex="4">
-                        <input type="submit" name="register" id="registerSend" value="Register" tabindex="5">
+                        <input type="submit" name="register" id="registerSubmit" value="Register" tabindex="5">
                         <br>
                         <p id="registerMessage"></p>
                     </form>
-                <div>
+                </div>
             </fieldset>
 
             <fieldset id="logInForms">
@@ -76,157 +80,19 @@
                             </div>
                         <label for="remember">Remember Me</label>
                         <input type="checkbox" name="remember" id="remember" tabindex="3">
-                        <input type="submit" name="login" id="login" value="Log In" tabindex="4">
+                        <input type="submit" name="login" id="loginSubmit" value="Log In" tabindex="4">
                         <br>
                         <p id="logInMessage"></p>
                     </form>
-                <div>
+                </div>
             </fieldset>
-            </div>
         </div>
     </div>
-
-    <script>
-        var usernameLogIn = "johnMarlowby";
-        var passwordLogIn = "testPassword!1";
-        var registerUser = localStorage.getItem("registerUsername");
-        var registerPass = localStorage.getItem("registerPassword");
-
-        function clearLocalStorage(){
-            localStorage.clear();
-            document.getElementById("clearLocal").innerHTML = "Local Storage Cleared!";
-            setTimeout(function refreshPage() {location.reload();}, 2000);
-        }
-
-        const logInForm = document.getElementById("logInForm");
-        const registerForm = document.getElementById("registerForm");
-        const usernameInput = document.getElementById("username");
-        const passwordInput = document.getElementById("password");
-        const usernameRegistrationInput = document.getElementById("usernameRegistration");
-        const passwordRegistrationInput = document.getElementById("passwordRegistration");
-
-
-        function goHome(){
-            window.location.href = "index.html";
-        }
-        logInForm.addEventListener("submit", function logInVerify(){
-            event.preventDefault();
-            if (usernameInput.value === usernameLogIn && passwordInput.value === passwordLogIn){
-                document.getElementById("logInMessage").style.color = "green";
-                document.getElementById("logInMessage").textContent = "Login successful! Returning to home page...";
-                localStorage.setItem("loggedIn", "true");
-                localStorage.setItem("username", usernameInput.value);
-                setTimeout(goHome, 3000);
-            }
-            else if (usernameInput.value === registerUser && passwordInput.value === registerPass){
-                document.getElementById("logInMessage").style.color = "green";
-                document.getElementById("logInMessage").textContent = "Login successful! Returning to home page...";
-                localStorage.setItem("loggedIn", "true");
-                localStorage.setItem("username", usernameInput.value);
-                setTimeout(goHome, 3000);
-            }
-            else{
-                document.getElementById("logInMessage").style.color = "red";
-                document.getElementById("logInMessage").textContent = "Invalid username or password!";
-            }
-        });
-
-        registerForm.addEventListener("submit", function registerVerify(){
-            event.preventDefault();
-            if (usernameRegistrationInput.value === "" || passwordRegistrationInput.value === ""){
-                document.getElementById("registerMessage").style.color = "red";
-                document.getElementById("registerMessage").textContent = "Please fill in all fields!";
-            }
-            else{
-                document.getElementById("registerMessage").style.color = "green";
-                document.getElementById("registerMessage").textContent = "Registration successful! Returning to home page...";
-                localStorage.setItem("loggedIn", "true");
-                localStorage.setItem("username", usernameRegistrationInput.value);
-                localStorage.setItem("registerUsername", usernameRegistrationInput.value);
-                localStorage.setItem("registerPassword", passwordRegistrationInput.value);
-                setTimeout(goHome, 3000);
-            }
-        });
-
-        function showPass(){
-            if (passwordInput.type === "password"){
-                passwordInput.type = "text";
-                document.getElementById("eyeIcon").innerHTML = "<ion-icon name='eye-off-outline' id='showPass' onclick='showPass()' class='passwordFieldIcon'></ion-icon>";
-            }
-            else{
-                passwordInput.type = "password";
-                document.getElementById("eyeIcon").innerHTML = "<ion-icon name='eye-outline' id='showPass' onclick='showPass()' class='passwordFieldIcon'></ion-icon>";
-            }
-        }
-
-        function registerShowPass(){
-            if (passwordRegistrationInput.type === "password"){
-                passwordRegistrationInput.type = "text";
-                document.getElementById("registerEyeIcon").innerHTML = "<ion-icon name='eye-off-outline' id='showPass' onclick='registerShowPass()' class='passwordFieldIcon'></ion-icon>";
-            }
-            else{
-                passwordRegistrationInput.type = "password";
-                document.getElementById("registerEyeIcon").innerHTML = "<ion-icon name='eye-outline' id='showPass' onclick='registerShowPass()' class='passwordFieldIcon'></ion-icon>";
-            }
-        }
-
-        const registerSwitch = document.getElementById("registrationForms");
-        const logInSwitch = document.getElementById("logInForms");
-
-        function openLogIn(){
-            logInSwitch.style.display = "block";
-            registerSwitch.style.display = "none";
-        }
-        function openRegister(){
-            registerSwitch.style.display = "block";
-            logInSwitch.style.display = "none";
-        }
-
-        var rememberUser = "";
-        var rememberPass = "";
-        var remembered = localStorage.getItem("rememberMe");
-
-        // var rememberCheckbox = document.getElementById("remember");
-        
-        //     if (rememberCheckbox.checked){
-        //         localStorage.setItem("rememberMe", "true");
-        //         localStorage.setItem("rememberUser", usernameInput.value);
-        //         localStorage.setItem("rememberPass", passwordInput.value);
-        //     }
-        //     else{
-        //         localStorage.setItem("rememberMe", "false");
-        //         localStorage.removeItem("rememberUser");
-        //         localStorage.removeItem("rememberPass");
-        //     }
-        // }
-
-        function rememberMeRegister(){
-            var rememberCheckbox = document.getElementById("rememberRegister");
-            if (rememberCheckbox.checked){
-                localStorage.setItem("rememberMe", "true");
-                localStorage.setItem("rememberUser", usernameRegistrationInput.value);
-                localStorage.setItem("rememberPass", passwordRegistrationInput.value);
-            }
-            else{
-                localStorage.setItem("rememberMe", "false");
-                localStorage.removeItem("rememberUser");
-                localStorage.removeItem("rememberPass");
-            }
-        }
-
-
-
-        function checkRememberMe(){
-            if (remembered === "true"){
-                document.getElementById("username").value = localStorage.getItem("rememberUser");
-                document.getElementById("password").value = localStorage.getItem("rememberPass");
-            }
-        }
-        checkRememberMe();
-
-    </script>
+    
+    <script src="logInForms.js"></script>
     <script src="logInScripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

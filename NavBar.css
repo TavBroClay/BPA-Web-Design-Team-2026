@@ -10,6 +10,12 @@ nav {
     align-items: center;
     justify-content: flex-end;
 }
+.navBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 nav img {
     margin-right: auto;
     margin-top: 0.25rem;
