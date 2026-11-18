@@ -1,0 +1,43 @@
+footer {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(79 129 189);
+    color: white;
+}
+.footerInfo {
+    margin-top: 5px;
+    display: flex;
+}
+.contactInfo {
+    margin-left: 50px;
+}
+.contactInfo img{
+    width: 175px;
+}
+.contactInfo h3 {
+    margin-top: -5px;
+}
+footer hr {
+    margin: 2rem;
+    border: 1px solid white;
+}
+.infoGroups {
+    display: flex;
+    gap: 75px;
+    margin: 0 5rem;
+}
+.infoGroups ul{
+    margin-top: -12px;
+    margin-left: -25px;    
+    list-style-type: none;
+}
+.infoGroups li a{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+.infoGroups li a:hover{
+    font-size: larger;
+    font-weight: bold;
+}

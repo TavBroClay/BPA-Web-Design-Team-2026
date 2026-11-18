@@ -164,16 +164,6 @@ input[name="r"]{
     background-color: rgb(247 148 30);
 }
 
-/*Footer*/
-footer {
-    font-family: "Century Gothic", sans-serif;
-    margin-top: 25px;
-    background-color: rgb(28 117 188);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
 /* MOBILE friendly */
 @media screen and (max-width: 750px) {
 
