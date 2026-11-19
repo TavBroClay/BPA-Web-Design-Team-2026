@@ -166,17 +166,6 @@ input[name="r"]{
 
 /* MOBILE friendly */
 @media screen and (max-width: 750px) {
-
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
     header p:first-child {
         font-size: 30px !important;
     }
@@ -204,11 +193,11 @@ input[name="r"]{
     .cityInfo a:hover {
     font-size: .90rem;
 }
-    .bar {
+    .switchBar {
         width: 25px;
         height: 5px;
     }
-    .bar:hover {
+    .switchBar:hover {
         width: 30px;
         height: 10px;
     }
