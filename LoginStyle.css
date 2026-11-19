@@ -78,7 +78,7 @@ body{
 @media screen and (max-width: 750px) {
 
     fieldset{
-        margin-top: 10vw;
+        margin-top: 10dvw;
     }
     html{
         overflow: hidden;
