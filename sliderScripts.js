@@ -1,7 +1,7 @@
 /* Cities' Slider */
 const slider = document.querySelector("#citySlider figure");
 const radios = document.querySelectorAll('input[name="r"]');
-const bars = document.querySelectorAll(".bar");
+const bars = document.querySelectorAll(".switchBar");
 const citySlider = document.querySelector("#citySlider");
 
 let currentSlide = 0;

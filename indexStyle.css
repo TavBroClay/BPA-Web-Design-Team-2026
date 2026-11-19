@@ -83,19 +83,19 @@ input[name="r"]{
     position: absolute;
     visibility: hidden;
 }
-.bar {
+.switchBar {
     width: 50px;
     height: 10px;
     border: 2px solid white;
     cursor: pointer;
     transition: 1s;
 }
-.bar:hover {
+.switchBar:hover {
     width: 55px;
     height: 15px;
     background-color: white;
 }
-.bar.active {
+.switchBar:active {
     background-color: white;
 }
 
