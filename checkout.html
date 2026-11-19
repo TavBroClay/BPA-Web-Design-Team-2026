@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="NavBar.css">
+    <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
+    <link rel="stylesheet" type="text/css" href="SubscriptionStyle.css">
+    <title>Marlowby/Checkout</title>
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="Images/Logo/Marlowby Website-NavLogo.png" translate="Marlowby"></a>
+        <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </button>
+        <ul class="navLinkes">
+            <li id="welcomeMessage"></li>
+            <hr>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Cities.html">Cities</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+            <li style="padding: 1.25rem 25px;" class="activePage"><a href="Subscription.html">Subscriptions</a></li>
+            <li><a style="padding-right: 25px;" href="Login.html" id="loginNav">Login</a></li>
+        </ul>
+    </nav>
+    <div class="greenLine">_</div>
+    <div class="orangeLine">_</div>
+    <div class="blueLine">_</div>
+    
+    <!-- <p id="topMargin" style="margin-top: 6.5dvh; visibility: hidden;">_</p> -->
+
+
+    <!-- <p id="chosenSubPrint">Placeholder</p> -->
+    <div class="checkoutForm">
+        <form class="checkoutForm" action="" method="post">
+            <fieldset class="checkoutForm">
+                <legend>Checkout</legend>
+                <fieldset class="billingForm">
+                    <legend>Billing Info</legend>  
+                        <div id="creditInfo">
+                            <label for="creditNumber">Credit Card Number</label>
+                            <input id="creditNumber" inputmode="numeric" type="text" minlength="16" maxlength="16" placeholder="1111 2222 3333 4444" required>
+                            <label for="expiration">Expiration Date</label>
+                            <input id="expiration" type="month" required>
+                            <label for="CVV">CVV</label>
+                            <input id="CVV" type="text" placeholder="CVV" required>
+                        </div>
+
+                        <br>
+
+                        <div id="billingAddress">
+                            <label for="billStreet">Billing Address</label>
+                            <input id="billStreet" type="text" placeholder="Street" required>
+                            <input id="billStreet2" type="text" placeholder="Street 2">
+                            <input id="billCity" type="text" placeholder="City" required>                            
+                            <select id="billState" name="State" required>
+                                <option value="Alabama">AL</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Arizona">AZ</option>
+                                <option value="Arkansas">AR</option>
+                                <option value="California">CA</option>
+                                <option value="Colorado">CO</option>
+                                <option value="Connecticut">CT</option>
+                                <option value="Delaware">DE</option>
+                                <option value="Florida">FL</option>
+                                <option value="Georgia">GA</option>
+                                <option value="Alaska">HI</option>
+                                <option value="Alaska">ID</option>
+                                <option value="Alaska">IL</option>
+                                <option value="Alaska">IN</option>
+                                <option value="Alaska">IA</option>
+                                <option value="Alaska">KS</option>
+                                <option value="Alaska">KY</option>
+                                <option value="Alaska">LA</option>
+                                <option value="Alaska">ME</option>
+                                <option value="Alaska">MD</option>
+                                <option value="Alaska">MA</option>
+                                <option value="Alaska">MI</option>
+                                <option value="Alaska">MN</option>
+                                <option value="Alaska">MS</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                                <option value="Alaska">AK</option>
+                            </select>
+                            <input id="billZip" type="text" placeholder="Zip Code" required>
+                        </div>
+
+                </fieldset>
+                <fieldset id="shippingForm">
+                    <legend>Shipping Info</legend>
+                        <div id="shippingAddress">
+                            <label for="shipStreet">Shipping Address</label>
+                            <input id="shipStreet" type="text" placeholder="Street" required>
+                            <input id="shipStreet2" type="text" placeholder="Street 2">
+                            <input id="shipCity" type="text" placeholder="City" required>
+                            <input id="shipState" type="text" placeholder="State" required>
+                            <input id="shipZip" type="text" placeholder="Zip Code" required>
+                        </div>
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="subsctiptionScripts.js"></script>
+    <script src="logInScripts.js"></script>
+    <script src="NavBarScript.js"></script>
+    <script>
+        // window.onload = function() {
+        //     document.getElementById("chosenSubPrint").innerHTML = localStorage.getItem("Subscription");
+        // }
+    </script>
+</body>
+</html>
