@@ -80,9 +80,6 @@ body{
     fieldset{
         margin-top: 10vw;
     }
-    #topMargin{
-        display:none;
-    }
     html{
         overflow: hidden;
     }
