@@ -104,6 +104,7 @@ input[name="r"]{
     text-align: center;
     padding: 0 25px;
     display: flex;
+    flex-wrap: wrap;
 }
 .steps img {
     width: 175px;
@@ -166,13 +167,16 @@ input[name="r"]{
 
 /* MOBILE friendly */
 @media screen and (max-width: 750px) {
-    header p:first-child {
-        font-size: 30px !important;
+
+    /* Header */
+    .sumInfo h1 {
+        font-size: 40px;
     }
-    header p:nth-child(2) {
-        font-size: 16px !important;
-        padding: 0 15px;
+    .sumInfo p {
+        padding: 0 10px;
     }
+
+    /* City Slider */
     #citySlider figure, #citySlider figure img {
         height: 325px;
     }
@@ -181,8 +185,7 @@ input[name="r"]{
         font-size: 35px;
     }
     .cityInfo p {
-        font-size: 14px;
-        width: 30%;
+        display: none;
     }
     .cityInfo button {
         padding: 0.75rem;
@@ -204,5 +207,13 @@ input[name="r"]{
     .citySliderNav {
         bottom: 10px;
         column-gap: 0.5rem;
+    }
+
+    /* How it works */
+    .steps {
+        justify-content: center;
+    }
+    .step1, .step3 {
+        margin: 0;
     }
 }

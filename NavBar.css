@@ -120,15 +120,17 @@ html, body {
         box-sizing: border-box;
     }
     nav img {
-        content: url(Images/Logo/MarlowbyWebsite-Icon.png);
-        width: 45px;
+        width: 125px;
+        margin-top: -5px;
+        margin-left: -15px;
     }
     .hamburger {
         display: block;
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
+        margin-top: -5px;
+        right: 0.50px;
         z-index: 3;
     }
     .hamburger.active .bar:nth-child(1) {
@@ -166,19 +168,16 @@ html, body {
     .navLinkes li,
     #welcomeMessage {
         padding: 1rem 25px;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
+        color: white;
     }
-
+    .activePage{
+        background-color: rgb(247 148 30);
+    }
     .navLinkes li a {
         display: block;
         color: white;
     }
-
-    .navLinkes li a:hover {
-        padding: 1rem;
-        font-size: large;
-    }
-
     .navLinkes hr {
         display: none;
     }
