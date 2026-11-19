@@ -7,8 +7,8 @@ fieldset{
     width: 300px;
     height: 24rem;
     margin-top: 10rem;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 40dvw;
+    margin-right: 40dvw;
     text-align: center;
     background-color: rgba(245 222 179 / .95);
     border-color: rgb(247 148 30);
@@ -46,15 +46,11 @@ input[type=text], input[type=password], input[type=email]{
     justify-self: center;
     margin: 10px auto;
 }
-/* .loginPage{
-    min-height: 985px;
-    background-image: url('Images/Cities/Matthew Hamilton-Phoenix-unsplash.jpg');
-    background-size: 1920px 1080px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-} */
+.loginPage{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 button#registerButton, button#logInButton{
     border-radius: 15px;
     padding: 5px;
@@ -72,26 +68,25 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+#clearLocal{
+    display:none;
 }
 
 @media screen and (max-width: 750px) {
 
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
     fieldset{
-        margin-left: 19%;
-        margin-right: 5%;
+        margin-top: 10vw;
     }
-    
+    #topMargin{
+        display:none;
+    }
+    html{
+        overflow: hidden;
+    }
+
 }
 
 
