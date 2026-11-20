@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="NavBar.css">
     <link rel="icon" type="image/x-icon" href="Images/Logo/MarlowbyWebsite-Icon.png">
     <link rel="stylesheet" type="text/css" href="SubscriptionStyle.css">
+    <link rel="stylesheet" type="text/css" href="checkoutStyle.css">
     <title>Marlowby/Checkout</title>
     </style>
 </head>
@@ -35,100 +36,175 @@
 
 
     <!-- <p id="chosenSubPrint">Placeholder</p> -->
-    <div class="checkoutForm">
-        <form class="checkoutForm" action="" method="post">
-            <fieldset class="checkoutForm">
-                <legend>Checkout</legend>
-                <fieldset class="billingForm">
-                    <legend>Billing Info</legend>  
-                        <div id="creditInfo">
-                            <label for="creditNumber">Credit Card Number</label>
-                            <input id="creditNumber" inputmode="numeric" type="text" minlength="16" maxlength="16" placeholder="1111 2222 3333 4444" required>
-                            <label for="expiration">Expiration Date</label>
-                            <input id="expiration" type="month" required>
-                            <label for="CVV">CVV</label>
-                            <input id="CVV" type="text" placeholder="CVV" required>
+    <div class="checkoutPage">
+        <div class="checkoutForm">
+            <form class="checkoutForm" action="" method="post">
+                <fieldset class="checkoutFields">
+                    <legend>Checkout</legend>
+                    <fieldset class="billingForm">
+                        <legend>Billing Info</legend>  
+                            <div id="creditInfo">
+                                <label for="creditNumber">Credit Card Number</label>
+                                <input id="creditNumber" inputmode="numeric" type="text" minlength="16" maxlength="16" placeholder="1111 2222 3333 4444" required>
+                                <label for="expiration">Expiration Date</label>
+                                <input id="expiration" type="month" required>
+                                <br>
+                                <label for="CVV">CVV</label>
+                                <input id="CVV" type="text" placeholder="CVV" minlength="3" maxlength="4" required>
+                            </div>
+
+                            
+
+                            <div id="billingAddress">
+                                <label for="billStreet">Billing Address</label>
+                                <input id="billStreet" type="text" placeholder="Street" required>
+                                <input id="billStreet2" type="text" placeholder="Street 2">
+                                <br>
+                                <input id="billCity" type="text" placeholder="City" required>                            
+                                <select id="billState" name="State" required>
+                                    <option value="Alabama">AL</option>
+                                    <option value="Alaska">AK</option>
+                                    <option value="Arizona">AZ</option>
+                                    <option value="Arkansas">AR</option>
+                                    <option value="California">CA</option>
+                                    <option value="Colorado">CO</option>
+                                    <option value="Connecticut">CT</option>
+                                    <option value="Delaware">DE</option>
+                                    <option value="Florida">FL</option>
+                                    <option value="Georgia">GA</option>
+                                    <option value="Hawaii">HI</option>
+                                    <option value="Idaho">ID</option>
+                                    <option value="Illinois">IL</option>
+                                    <option value="Indiana">IN</option>
+                                    <option value="Iowa">IA</option>
+                                    <option value="Kansas">KS</option>
+                                    <option value="Kentucky">KY</option>
+                                    <option value="Louisiana">LA</option>
+                                    <option value="Maine">ME</option>
+                                    <option value="Maryland">MD</option>
+                                    <option value="Massachusettes">MA</option>
+                                    <option value="Michigan">MI</option>
+                                    <option value="Minnesota">MN</option>
+                                    <option value="Mississippi">MS</option>
+                                    <option value="Missouri">MO</option>
+                                    <option value="Montana">MT</option>
+                                    <option value="Nebraska">NE</option>
+                                    <option value="Nevada">NV</option>
+                                    <option value="New Hampshire">NH</option>
+                                    <option value="New Jersey">NJ</option>
+                                    <option value="New Mexico">NM</option>
+                                    <option value="New York">NY</option>
+                                    <option value="North Carolina">NC</option>
+                                    <option value="North Dakota">ND</option>
+                                    <option value="Ohio">OH</option>
+                                    <option value="Oklahoma">OK</option>
+                                    <option value="Oregan">OR</option>
+                                    <option value="Pennsylvania">PA</option>
+                                    <option value="Rhode Island">RI</option>
+                                    <option value="South Carolina">SC</option>
+                                    <option value="South Dakota">SD</option>
+                                    <option value="Tennessee">TN</option>
+                                    <option value="Texas">TX</option>
+                                    <option value="Utah">UT</option>
+                                    <option value="Vermont">VT</option>
+                                    <option value="Virginia">VA</option>
+                                    <option value="Washington">WA</option>
+                                    <option value="West Virginia">WV</option>
+                                    <option value="Wisconsin">WI</option>
+                                    <option value="Wyoming">WY</option>
+                                </select>
+                                <input id="billZip" type="text" placeholder="Zip Code" required>
+                            </div>
+                    </fieldset>
+                    <hr class="greenLine">
+                    <fieldset class="shippingForm">
+                        <legend>Shipping Info</legend>
+                            <div id="personalInfo">
+                                <label for="shipNameFirst">Customer Information</label>
+                                <input id="shipNameFirst" type="text" placeholder="First Name" required>
+                                <input id="shipNameLast" type="text" placeholder="Last Name" required>
+                                <br>
+                                <label for="email">Email</label>
+                                <input id="email" type="email" placeholder="Email Address" required>
+                                <label for="phoneNumber">Phone Number</label>
+                                <input id="phoneNumber" type="tel" maxlength="10" placeholder="123-456-7890" required>
+                            </div>
+                            <div id="shippingAddress">
+                                <label for="shipStreet">Shipping Address</label>
+                                <input id="shipStreet" type="text" placeholder="Street" required>
+                                <input id="shipStreet2" type="text" placeholder="Street 2">
+                                <br>
+                                <input id="shipCity" type="text" placeholder="City" required>
+                                <select id="shipState" name="State" required>
+                                    <option value="Alabama">AL</option>
+                                    <option value="Alaska">AK</option>
+                                    <option value="Arizona">AZ</option>
+                                    <option value="Arkansas">AR</option>
+                                    <option value="California">CA</option>
+                                    <option value="Colorado">CO</option>
+                                    <option value="Connecticut">CT</option>
+                                    <option value="Delaware">DE</option>
+                                    <option value="Florida">FL</option>
+                                    <option value="Georgia">GA</option>
+                                    <option value="Hawaii">HI</option>
+                                    <option value="Idaho">ID</option>
+                                    <option value="Illinois">IL</option>
+                                    <option value="Indiana">IN</option>
+                                    <option value="Iowa">IA</option>
+                                    <option value="Kansas">KS</option>
+                                    <option value="Kentucky">KY</option>
+                                    <option value="Louisiana">LA</option>
+                                    <option value="Maine">ME</option>
+                                    <option value="Maryland">MD</option>
+                                    <option value="Massachusettes">MA</option>
+                                    <option value="Michigan">MI</option>
+                                    <option value="Minnesota">MN</option>
+                                    <option value="Mississippi">MS</option>
+                                    <option value="Missouri">MO</option>
+                                    <option value="Montana">MT</option>
+                                    <option value="Nebraska">NE</option>
+                                    <option value="Nevada">NV</option>
+                                    <option value="New Hampshire">NH</option>
+                                    <option value="New Jersey">NJ</option>
+                                    <option value="New Mexico">NM</option>
+                                    <option value="New York">NY</option>
+                                    <option value="North Carolina">NC</option>
+                                    <option value="North Dakota">ND</option>
+                                    <option value="Ohio">OH</option>
+                                    <option value="Oklahoma">OK</option>
+                                    <option value="Oregan">OR</option>
+                                    <option value="Pennsylvania">PA</option>
+                                    <option value="Rhode Island">RI</option>
+                                    <option value="South Carolina">SC</option>
+                                    <option value="South Dakota">SD</option>
+                                    <option value="Tennessee">TN</option>
+                                    <option value="Texas">TX</option>
+                                    <option value="Utah">UT</option>
+                                    <option value="Vermont">VT</option>
+                                    <option value="Virginia">VA</option>
+                                    <option value="Washington">WA</option>
+                                    <option value="West Virginia">WV</option>
+                                    <option value="Wisconsin">WI</option>
+                                    <option value="Wyoming">WY</option>
+                                </select>                            
+                                <input id="shipZip" type="text" placeholder="Zip Code" required>
+                            </div>
+                    </fieldset>
+                    <hr class="orangeLine">
+                    <fieldset class="checkoutSection">
+                        <div class="Price">
+                            <h2>Subtotal:</h2>
+                            <h2>Tax:</h2>
+                            <hr>
+                            <h2>Total:</h2>
                         </div>
-
-                        <br>
-
-                        <div id="billingAddress">
-                            <label for="billStreet">Billing Address</label>
-                            <input id="billStreet" type="text" placeholder="Street" required>
-                            <input id="billStreet2" type="text" placeholder="Street 2">
-                            <input id="billCity" type="text" placeholder="City" required>                            
-                            <select id="billState" name="State" required>
-                                <option value="Alabama">AL</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Arizona">AZ</option>
-                                <option value="Arkansas">AR</option>
-                                <option value="California">CA</option>
-                                <option value="Colorado">CO</option>
-                                <option value="Connecticut">CT</option>
-                                <option value="Delaware">DE</option>
-                                <option value="Florida">FL</option>
-                                <option value="Georgia">GA</option>
-                                <option value="Alaska">HI</option>
-                                <option value="Alaska">ID</option>
-                                <option value="Alaska">IL</option>
-                                <option value="Alaska">IN</option>
-                                <option value="Alaska">IA</option>
-                                <option value="Alaska">KS</option>
-                                <option value="Alaska">KY</option>
-                                <option value="Alaska">LA</option>
-                                <option value="Alaska">ME</option>
-                                <option value="Alaska">MD</option>
-                                <option value="Alaska">MA</option>
-                                <option value="Alaska">MI</option>
-                                <option value="Alaska">MN</option>
-                                <option value="Alaska">MS</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                                <option value="Alaska">AK</option>
-                            </select>
-                            <input id="billZip" type="text" placeholder="Zip Code" required>
-                        </div>
-
+                        <input type="submit" id="checkout" value="Checkout">
+                    </fieldset>
                 </fieldset>
-                <fieldset id="shippingForm">
-                    <legend>Shipping Info</legend>
-                        <div id="shippingAddress">
-                            <label for="shipStreet">Shipping Address</label>
-                            <input id="shipStreet" type="text" placeholder="Street" required>
-                            <input id="shipStreet2" type="text" placeholder="Street 2">
-                            <input id="shipCity" type="text" placeholder="City" required>
-                            <input id="shipState" type="text" placeholder="State" required>
-                            <input id="shipZip" type="text" placeholder="Zip Code" required>
-                        </div>
-                </fieldset>
-            </fieldset>
-        </form>
+            </form>
+        </div>
+
     </div>
-
     <script src="subsctiptionScripts.js"></script>
     <script src="logInScripts.js"></script>
     <script src="NavBarScript.js"></script>
