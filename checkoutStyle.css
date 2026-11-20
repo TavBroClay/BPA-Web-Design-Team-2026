@@ -1,0 +1,77 @@
+fieldset{
+    background-color: wheat;
+    border-radius:15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    display:flex;
+    flex-direction: column;
+    width: 50dvw;
+    /* min-height: 30vh; */
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    font-size: 16px;
+}
+#checkout{
+    border-radius: 15px;
+    background-color: rgb(28, 117, 188);
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+.checkoutPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Price{
+    width: 50dvw;
+}
+input, select{
+    border-radius: 15px;
+    border-color: rgb(28, 117, 188);
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px 5px;
+}
+.checkoutFields{
+    background-color: wheat;
+    border-color: rgb(28, 117, 188);
+}
+.billingForm{
+    /* border-color: rgb(104, 173, 69); */
+    border-style: none;
+}
+.shippingForm{
+    /* border-color: rgb(247, 148, 30); */
+    border-style: none;
+}
+.checkoutSection{
+    /* border-color: rgb(28, 117, 188); */
+    border-style: none;
+}
+
+@media screen and (max-width: 750px) {
+
+    fieldset{
+        width: 82dvw;
+    }
+    .checkoutPage{
+        flex-direction: column;
+    }
+
+}
