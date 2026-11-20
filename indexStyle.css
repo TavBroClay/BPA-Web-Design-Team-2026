@@ -178,20 +178,21 @@ input[name="r"]{
 
     /* City Slider */
     #citySlider figure, #citySlider figure img {
-        height: 325px;
+        height: 300px;
     }
     .cityInfo h1 {
-        margin-top: 130px;
+        margin-top: 200px;
         font-size: 35px;
     }
     .cityInfo p {
         display: none;
     }
     .cityInfo button {
+        margin-top: 7px;
         padding: 0.75rem;
     }
     .cityInfo a {
-        font-size: .75rem;
+        font-size: .80rem;
     }
     .cityInfo a:hover {
     font-size: .90rem;

@@ -12,9 +12,9 @@ footer {
 .contactInfo {
     margin-left: 50px;
 }
-.contactInfo img{
+/*.contactInfo img{
     width: 175px;
-}
+}*/
 .contactInfo h3 {
     margin-top: -5px;
 }
@@ -24,6 +24,7 @@ footer hr {
 }
 .infoGroups {
     display: flex;
+    flex-wrap: wrap;
     gap: 75px;
     margin: 0 5rem;
 }
@@ -40,4 +41,17 @@ footer hr {
 .infoGroups li a:hover{
     font-size: larger;
     font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+    .contactInfo {
+    margin-left: 15px;
+    }
+    footer hr {
+    margin: 1rem;
+    }
+    .infoGroups {
+        gap: 10px;
+        margin: 0;
+    }
 }
